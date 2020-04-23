@@ -1,6 +1,9 @@
 package com.example.demo.models;
 
+
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 import java.util.UUID;
 
@@ -12,14 +15,19 @@ public class CustomerData {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public UUID customerId;
     @Column(name = "customerfirstname")
+    @NotBlank(message = "Please enter first name")
     public String customerFirstName;
     @Column(name = "customerlastname")
+    @NotBlank(message = "Please enter last name")
     public String customerLastName;
-    @Column(name = "vehiclepurchased")
+    @Column(name = "vehiclepurchased") //pull UUIDs from Vehicle Table to populate a drop-down list//
+    @NotBlank(message = "Please select a vehicle")
     public String vehiclePurchased;
     @Column(name = "datepurchased")
+    @NotBlank(message = "Please enter a date")
     public Date datePurchased;
-    @Column (name = "salesperson")
+    @Column (name = "salesperson") //pull UUIDs from Employee Table to populate a drop-down list//
+    @NotBlank(message = "Please select a sales person")
     public String salesPerson;
     public CustomerData(){
 

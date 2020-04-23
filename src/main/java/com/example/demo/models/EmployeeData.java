@@ -1,6 +1,7 @@
 package com.example.demo.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 import java.util.UUID;
 
@@ -13,10 +14,13 @@ public class EmployeeData {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public UUID employeeId;
     @Column(name = "employeefirstname")
+    @NotBlank(message = "Please enter first name")
     public String employeeFirstName;
     @Column(name = "employeelastname")
+    @NotBlank(message = "Please enter last name")
     public String employeeLastName;
     @Column(name = "hiredate")
+    @NotBlank(message = "Please enter hire date")
     public Date hireDate;
     @Column(name = "employeeactive")
     public boolean employeeActive;

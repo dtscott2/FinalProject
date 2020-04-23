@@ -3,9 +3,27 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
 
+
     <title>Car Dealership</title>
 
+    <!-- Load an icon library -->
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" />
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <div class="mainmenu">
+
+        <a class="active" th:href="@{/index.html}"><i class="(Put css class here)"></i> Home </a>
+        <a class="active" th:href="@{/vehicle.html}"><i class="(Put css class here)"></i> Vehicles </a>
+        <a class="active" th:href="@{/customer.html}"><i class="(Put css class here)"></i> Customers </a>
+        <a class="active" th:href="@{/employee.html}"><i class="(Put css class here)"></i> Employees </a>
+        <a class="active" th:href="@{t/ransaction.html}"><i class="(Put css class here)"></i> Transactions </a>
+
+    </div>
+
+    <b></b>
+
+
 
 </head>
 
