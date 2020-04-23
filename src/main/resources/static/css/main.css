@@ -1,4 +1,5 @@
 /* Style the navigation bar */
+
 .mainmenu {
     width: 100%;
     background-color: #555;
@@ -6,6 +7,7 @@
 }
 
 /* Navbar links */
+
 .mainmenu a {
     float: left;
     text-align: center;
@@ -15,21 +17,94 @@
     font-size: 17px;
 }
 
-/* Navbar links on mouse-over */
+/* Navbar links: hover */
+
+
 .mainmenu a:hover {
     background-color: #000;
 }
 
-/* Current/active navbar link */
+/* Active navbar link */
+
 .active {
-    background-color: #4CAF50;
+    background-color: lightslategray;
 }
 
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+
+/* format for the add new section div */
+
+.addnew {
+
+    padding: 20px;
+    width: 30%;
+    height: auto;
+    float: left;
+    background: cadetblue;
+
+}
+
+/* format for the view/table section div*/
+
+.view {
+
+    overflow-x:auto;
+    padding-right: 20px;
+    width: 62%;
+    height: auto;
+    float: right;
+    background: cadetblue;
+
+}
+
+input[type=text], select, input[type=number] {
+    width: 90%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid darkslategray;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 90%;
+    background-color: lightslategrey;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: lightsteelblue;
+}
+
+lable {
+    color: whitesmoke;
+}
+
+fieldset {
+    color: whitesmoke;
+}
+
+table {
+    width: 90%;
+    font-size: 14px;
+    font-family: "Courier New";
+    border-bottom: darkslategray;
+    background: whitesmoke;
+    border-collapse: collapse;
+    border-bottom: 4px;
+}
+/* makes nav bar vertical instead of horizontal when shrinking page   */
 
 @media screen and (max-width: 500px) {
     .mainmenu a {
         float: none;
         display: block;
     }
-} .
+}
+
+
