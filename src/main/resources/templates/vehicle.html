@@ -26,54 +26,17 @@
 </head>
 <body>
 
-
-    <div class="addnew">
-
-        <form accept-charset="UTF-8" action="action_page.php" autocomplete="off" method="GET" target="_blank">
-            <fieldset>
-                <legend>Title: Add a New Vehicle</legend>
-
-                <input type="text" value="Make" />
-                <br />
-                <br />
-                <input type="text" value="Model" />
-                <br />
-                <br />
-                <label>Year</label>
-                <br />
-                <input type="number" value="Year" />
-                <br />
-                <br />
-                <input type="text" value="VIN" />
-                <br />
-                <br />
-                <input type="text" value="Color" />
-                <br />
-                <br />
-                <label>Mileage</label>
-                <input type="number" value="Mileage" />
-                <br />
-                <br />
-                <label>Price</label>
-                <input type="number" value="Price" />
-                <br />
-                <br />
-                <label>Availability</label>
-                <select>
-                <option selected="selected" value="1">For Sale</option>
-                <option value="2">Sold</option>
-                </select>
-                <br />
-                <button type="submit" value="Submit">Submit</button>
+    <div align="center">
+        <h1>Vehicle List</h1>
+        <a th:href="@{/vehicle_add}">Add New Vehicle</a>
+    <br/><br/>
 
 
-            </fieldset>
-        </form>
-    </div>
+
     <div class="view">
 
         <table>
-            <tr>
+            <thead>
                 <th>Make</th>
                 <th>Model</th>
                 <th>Year</th>
@@ -81,21 +44,30 @@
                 <th>Color</th>
                 <th>Mileage</th>
                 <th>Availability</th>
-            </tr>
-            <tr>
+                <th></th>
 
-                <td>${getVehicleMake()}</td>
-                <td>${getVehicleMModel()}</td>
-                <td>${getVehicleYear()}</td>
-                <td>${getVehicleVin()}</td>
-                <td>${getVehicleColor()}</td>
-                <td>${getVehicleMileage()}</td>
-                <td>${getVehiclePrice()}</td>
-                <td>${getVehicleAvail()}</td>
+            </thead>
+
+            <tr th:each="vehicleData : ${vehicledata}">
+
+                <td th:text="${vehicleData.vehiclemake}"> </td>
+<!--                <td th:text="${vehicledata.vehiclemodel}"></td>-->
+<!--                <td th:text="${vehicledata.vehicleyear}"></td>-->
+<!--                <td th:text="${vehicledata.vehiclevin}"></td>-->
+<!--                <td th:text="${vehicledata.vehiclecolor}"></td>-->
+<!--                <td th:text="${vehicledata.vehiclemileage}"></td>-->
+<!--                <td th:text="${vehicledata.vehicleprice}"></td>-->
+<!--                <td th:text="${vehicledata.vehicleavail}"></td>-->
+<!--                <td>-->
+<!--                    <a th:href="@{'/vehicle_update/' + ${vehicledata.vehicleid}}">Update</a>-->
+<!--                    &nbsp;&nbsp;&nbsp;-->
+<!--                    <a th:href="@{'/vehicle_delete/' + ${vehicledata.vehicleid}}">Delete</a>-->
+<!--                </td>-->
 
             </tr>
         </table>
 
+    </div>
     </div>
 <h1></h1>
 

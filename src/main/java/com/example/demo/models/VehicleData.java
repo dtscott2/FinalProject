@@ -1,108 +1,118 @@
 package com.example.demo.models;
 
 import javax.persistence.*;
-import java.time.Year;
-import java.util.Date;
-import java.util.UUID;
+
 
 @Entity
-@Table (name = "vehicledata")
+@Table(name = "vehicledata")
 public class VehicleData {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public UUID vehicleId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public long vehicleid;
     @Column(name = "vehiclemake")
-    public String vehicleMake;
+    public String vehiclemake;
     @Column(name = "vehiclemodel")
-    public String vehicleModel;
+    public String vehiclemodel;
     @Column(name = "vehicleyear")
-    public Year vehicleYear;
+    public int vehicleyear;
     @Column(name = "vehiclevin")
-    public String vehicleVIN;
+    public String vehiclevin;
     @Column(name = "vehiclecolor")
-    public String  vehicleColor;
-    @Column(name = "vehiclemileage")
-    public int  vehicleMileage;
+    public String vehiclecolor;
+    @Column(name = "vehiclenileage")
+    public int vehiclemileage;
     @Column(name = "vehicleprice")
-    public int vehiclePrice;
+    public int vehicleprice;
     @Column(name = "vehicleavail")
-    public boolean vehicleAvail;
-    public VehicleData(){
+    public String vehicleavail;
 
-    }
-    public VehicleData(UUID vehicleId, String vehicleMake, String vehicleModel, Year vehicleYear,
-                        String  vehicleVIN, String vehicleColor, int vehicleMileage, int vehiclePrice, boolean vehicleAvail) {
-        this.vehicleId = vehicleId;
-        this.vehicleMake = vehicleMake;
-        this.vehicleModel = vehicleModel;
-        this.vehicleYear = vehicleYear;
-        this.vehicleVIN = vehicleVIN;
-        this.vehicleColor = vehicleColor;
-        this.vehicleMileage = vehicleMileage;
-        this.vehiclePrice = vehiclePrice;
-        this.vehicleAvail = vehicleAvail;
+    public VehicleData() {
     }
 
-    public UUID getVehicleId(){
-        return vehicleId;
-    }
-    public void setVehicleId(UUID vehicleId){
-        this.vehicleId = vehicleId;
-    }
-
-    public String getVehicleMake() {
-        return vehicleMake;
-    }
-    public void setVehicleMake(String vehicleMake) {
-        this.vehicleMake = vehicleMake;
-    }
-
-    public String getVehicleModel(){
-        return vehicleModel;
-    }
-    public void setVehicleModel(String vehicleModel){
-        this.vehicleModel = vehicleModel;
+    public VehicleData(long vehicleid, String vehiclemake, String vehiclemodel, int vehicleyear,
+                       String vehiclevin, String vehiclecolor, int vehiclemileage, int vehicleprice, String vehicleavail) {
+        this.vehicleid = vehicleid;
+        this.vehiclemake = vehiclemake;
+        this.vehiclemodel = vehiclemodel;
+        this.vehicleyear = vehicleyear;
+        this.vehiclevin = vehiclevin;
+        this.vehiclecolor = vehiclecolor;
+        this.vehiclemileage = vehiclemileage;
+        this.vehicleprice = vehicleprice;
+        this.vehicleavail = vehicleavail;
     }
 
-    public Year getVehicleYear(){
-        return vehicleYear;
-    }
-    public void setVehicleYear(Year vehicleYear) {
-        this.vehicleYear = vehicleYear;
+
+    public long getVehicleid() {
+        return vehicleid;
     }
 
-    public String getVehicleVIN(){
-        return vehicleVIN;
-    }
-    public void setVehicleVIN(String vehicleVIN){
-        this.vehicleVIN = vehicleVIN;
+    public void setVehicleid(long vehicleid) {
+        this.vehicleid = vehicleid;
     }
 
-    public String getVehicleColor() {
-        return vehicleColor;
-    }
-    public void setVehicleColor(String vehicleColor) {
-        this.vehicleColor = vehicleColor;
+    public String getVehiclemake() {
+        return vehiclemake;
     }
 
-    public int getVehicleMileage() {
-        return vehicleMileage;
-    }
-    public void setVehicleMileage(int vehicleMileage) {
-        this.vehicleMileage = vehicleMileage;
+    public void setVehiclemake(String vehiclemake) {
+        this.vehiclemake = vehiclemake;
     }
 
-    public int getVehiclePrice() {
-        return vehiclePrice;
+    public String getVehiclemodel() {
+        return vehiclemodel;
     }
-    public void setVehiclePrice(int vehiclePrice) {
-        this.vehiclePrice = vehiclePrice;
+
+    public void setVehiclemodel(String vehiclemodel) {
+        this.vehiclemodel = vehiclemodel;
     }
-    public boolean getVehicleAvail() {
-        return vehicleAvail;
+
+    public int getVehicleyear() {
+        return vehicleyear;
     }
-    public void setVehicleAvail(boolean vehicleAvail) {
-        this.vehicleAvail = vehicleAvail;
+
+    public void setVehicleyear(int vehicleyear) {
+        this.vehicleyear = vehicleyear;
+    }
+
+    public String getVehiclevin() {
+        return vehiclevin;
+    }
+
+    public void setVehiclevin(String vehiclevin) {
+        this.vehiclevin = vehiclevin;
+    }
+
+    public String getVehiclecolor() {
+        return vehiclecolor;
+    }
+
+    public void setVehiclecolor(String vehiclecolor) {
+        this.vehiclecolor = vehiclecolor;
+    }
+
+    public int getVehiclemileage() {
+        return vehiclemileage;
+    }
+
+    public void setVehiclemileage(int vehiclemileage) {
+        this.vehiclemileage = vehiclemileage;
+    }
+
+    public int getVehicleprice() {
+        return vehicleprice;
+    }
+
+    public void setVehicleprice(int vehicleprice) {
+        this.vehicleprice = vehicleprice;
+    }
+
+    public String isVehicleavail() {
+        return vehicleavail;
+    }
+
+    public void setVehicleavail(String vehicleavail) {
+        this.vehicleavail = vehicleavail;
     }
 }
-
